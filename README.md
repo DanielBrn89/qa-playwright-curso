@@ -60,7 +60,7 @@ Running 3 tests using 1 worker
 
 ## Evidencia de ejecución
 
-![Evidencia de los tests ejecutados correctamente](evidencias/tests-pasando.png)
+![Evidencia de los tests ejecutados correctamente](evidencias/imagen_test.png)
 
 ## Comandos utilizados
 
