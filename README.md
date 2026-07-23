@@ -1,6 +1,6 @@
 # Proyecto de pruebas automatizadas con Playwright
 
-## Datos 
+## Datos
 
 - **Nombre:** JOSE DANIEL BRAN
 - **Carné:** 1790-22-15044
@@ -10,9 +10,12 @@
 
 ## Descripción del proyecto
 
-En este proyecto configuré Playwright con TypeScript para realizar pruebas automatizadas sobre la aplicación web Demoblaze.
+En este proyecto configuré Playwright con TypeScript para realizar pruebas
+automatizadas sobre la aplicación web DemoBlaze.
 
-El objetivo de la práctica fue comprobar que algunos elementos principales del sitio web funcionaran y se mostraran correctamente.
+El objetivo de esta práctica fue aplicar navegación entre páginas,
+estrategias de espera y capturas de pantalla como evidencia de la ejecución
+de las pruebas.
 
 ## Configuración utilizada
 
@@ -25,71 +28,31 @@ Para desarrollar y ejecutar el proyecto utilicé las siguientes herramientas:
 - Chromium
 - Git y GitHub
 
+## Tarea 2: Navegación, estrategias de espera y capturas de pantalla
+
 ## Pruebas realizadas
 
-Configuré tres pruebas automatizadas:
+Se configuraron cuatro pruebas automatizadas:
 
-1. Verifiqué que la página principal cargara correctamente.
-2. Verifiqué que el menú de categorías fuera visible.
-3. Verifiqué que la barra de navegación mostrara sus enlaces correctamente.
-
-En la tercera prueba comprobé la visibilidad de los siguientes enlaces:
-
-- Home
-- Contact
-- About us
-- Cart
-- Log in
-- Sign up
+1. Navegar al carrito y regresar a la página de inicio.
+2. Navegar a la categoría Phones y abrir el detalle de un producto.
+3. Capturar por separado la barra de navegación y el footer.
+4. Verificar que la página principal cargue en menos de 10 segundos.
 
 ## Resultado de las pruebas
 
-Los tres tests se ejecutaron correctamente.
+Los cuatro tests se ejecutaron correctamente en Chromium.
 
 El resultado obtenido fue:
 
 ```text
-Running 3 tests using 1 worker
+Running 4 tests using 1 worker
 
-✓ La página carga
-✓ El menú de categorías es visible
-✓ La barra de navegación tiene los enlaces
+✓ Navegar al carrito y regresar al inicio
+✓ Navegar a la categoría Phones y ver un producto
+✓ Capturar el navbar y el footer por separado
+✓ Verificar tiempo de carga de la página
 
-3 passed
-```
+Tiempo de carga: 834ms
 
-## Evidencia de ejecución
-
-![Evidencia de los tests ejecutados correctamente](evidencia/imagen_test.png)
-
-## Comandos utilizados
-
-### Instalar los navegadores de Playwright
-
-```bash
-npx playwright install
-```
-
-### Ejecutar los tests
-
-```bash
-npx playwright test
-```
-
-### Abrir el reporte HTML
-
-```bash
-npx playwright show-report
-```
-
-### Ejecutar Playwright en modo visual
-
-```bash
-npx playwright test --ui
-```
-
-## Conclusión
-
-Con esta práctica logré configurar correctamente un proyecto de pruebas automatizadas utilizando Playwright y TypeScript. También aprendí a crear pruebas para verificar la carga de una página, la visibilidad de sus elementos y el funcionamiento de los enlaces de navegación.
-
-Los tres tests fueron ejecutados correctamente en Chromium.
+4 passed
