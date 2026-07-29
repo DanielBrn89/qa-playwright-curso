@@ -56,3 +56,29 @@ Running 4 tests using 1 worker
 Tiempo de carga: 834ms
 
 4 passed
+
+## Clase 03 - Locators en Playwright
+
+En esta práctica se utilizaron diferentes estrategias de localización de
+elementos en Playwright sobre la aplicación DemoBlaze.
+
+Se trabajó con:
+
+- Locators por texto.
+- Locators CSS.
+- Locators por ID.
+- Locators por atributo.
+- Locators encadenados.
+- Negaciones.
+- Locator por rol.
+- Locator con filter().
+- Selector por atributo parcial.
+
+### Resultado de ejecución
+
+Se ejecutaron 9 pruebas automatizadas correspondientes a la Clase 03.
+
+```text
+Running 9 tests using 1 worker
+
+9 passed
