@@ -82,3 +82,41 @@ Se ejecutaron 9 pruebas automatizadas correspondientes a la Clase 03.
 Running 9 tests using 1 worker
 
 9 passed
+
+
+
+## Clase 04 - Actions en Playwright
+
+En esta práctica se trabajó con acciones de usuario utilizando Playwright
+sobre la aplicación DemoBlaze.
+
+Se realizaron pruebas relacionadas con registro de usuarios, inicio de sesión,
+interacción con productos, carrito de compras, formularios y manejo de campos
+de texto.
+
+### Pruebas realizadas
+
+1. Registrar un nuevo usuario.
+2. Login con el usuario registrado.
+3. Flujo completo: login, agregar producto y verificar carrito.
+4. Intentar login con credenciales incorrectas.
+5. Llenar el formulario Place Order utilizando fill().
+6. Cerrar el modal de login utilizando el botón Close.
+7. Llenar y limpiar un campo utilizando clear().
+
+### Resultado de ejecución
+
+Los siete tests se ejecutaron correctamente en Chromium.
+
+```text
+Running 7 tests using 1 worker
+
+✓ Registrar un nuevo usuario
+✓ Login con el usuario registrado
+✓ Flujo completo: login -> agregar producto -> verificar carrito
+✓ Intentar login con credenciales incorrectas
+✓ Reto 1 - Llenar formulario Place Order con fill()
+✓ Reto 2 - Cerrar modal de login con Close
+✓ Reto 3 - Llenar y limpiar un campo con clear()
+
+7 passed
