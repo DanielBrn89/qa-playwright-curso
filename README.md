@@ -120,3 +120,49 @@ Running 7 tests using 1 worker
 ✓ Reto 3 - Llenar y limpiar un campo con clear()
 
 7 passed
+
+
+---
+
+# Clase 05 - Assertions y técnicas de diseño de pruebas
+
+## Descripción
+
+En la Clase 05 se trabajó con técnicas tradicionales de diseño de pruebas
+y assertions de Playwright utilizando la aplicación Sauce Demo.
+
+Se aplicaron clases de equivalencia, análisis de valores en la frontera,
+tablas de decisión, expresiones regulares, estados de elementos y soft
+assertions.
+
+## Pruebas realizadas
+
+Se implementaron 10 tests base:
+
+1. CE válida: login con credenciales correctas.
+2. CE inválida: usuario no existe.
+3. CE inválida: usuario bloqueado.
+4. Valor en frontera: campos vacíos.
+5. Verificar que el inventario tenga exactamente 6 productos.
+6. Verificar el precio del primer producto mediante expresión regular.
+7. Verificar atributos y estados de los elementos del inventario.
+8. Verificar múltiples propiedades utilizando soft assertions.
+9. Tabla de decisión - Regla 1: usuario logueado con productos.
+10. Tabla de decisión - Regla 2: usuario logueado con carrito vacío.
+
+## Tests reto
+
+También se desarrollaron los tres tests reto solicitados:
+
+11. Ordenamiento de productos utilizando `toHaveValue()`.
+12. Verificación del foco del campo de usuario utilizando `toBeFocused()`.
+13. Verificación del estilo CSS del botón Add to cart utilizando `toHaveCSS()`.
+
+## Resultado de ejecución
+
+Los 13 tests fueron ejecutados correctamente en Chromium.
+
+```text
+Running 13 tests using 1 worker
+
+13 passed (17.6s)
