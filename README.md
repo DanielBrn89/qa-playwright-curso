@@ -452,3 +452,163 @@ Los tres retos fueron completados correctamente:
 
 
 
+---
+
+# Clase 08 - Hooks, Suites y SQA Plan
+
+## Descripción
+
+En la Clase 08 se trabajó con el proceso fundamental del testing, hooks de
+Playwright, suites de prueba, ejecución en paralelo y creación de un SQA Plan
+mínimo para Sauce Demo.
+
+También se creó un helper reutilizable de autenticación para evitar repetir
+el proceso de login en cada prueba.
+
+## Helper de autenticación
+
+Se creó el archivo:
+
+```text
+helpers/auth.ts
+```
+
+Este archivo contiene la función `loginAs()`, utilizada para iniciar sesión
+con diferentes tipos de usuario en Sauce Demo.
+
+## Pruebas base
+
+En `tests/clase08.spec.ts` se implementaron 7 pruebas:
+
+1. Verificar que el inventario muestre 6 productos.
+2. Verificar que todos los productos tengan precio visible.
+3. Verificar que todos los productos tengan imagen visible.
+4. Verificar el funcionamiento del menú hamburguesa.
+5. Verificar que el logout funcione correctamente.
+6. Verificar que el usuario estándar pueda llegar al checkout.
+7. Evaluar el comportamiento del usuario `performance_glitch_user`.
+
+## Hooks utilizados
+
+Durante la práctica se utilizaron los siguientes hooks:
+
+- `beforeEach()` para realizar automáticamente el login antes de cada test.
+- `afterEach()` para generar una captura de pantalla cuando un test falla.
+- `beforeAll()` y `afterAll()` en la suite serial de la tarea.
+
+## Tests reto
+
+En `tests/tarea08.spec.ts` se implementaron tres retos.
+
+### Reto 1 - Suite serial con página compartida
+
+Se utilizó:
+
+```typescript
+test.describe.configure({ mode: 'serial' })
+```
+
+junto con una página creada dentro de `beforeAll()` y reutilizada entre los
+tests de la suite.
+
+### Reto 2 - test.slow()
+
+Se utilizó `test.slow()` para el usuario `performance_glitch_user`, permitiendo
+triplicar el timeout disponible para una prueba que presenta lentitud
+artificial.
+
+### Reto 3 - test.skip() dinámico
+
+Se implementó `test.skip()` con una condición evaluada durante la ejecución
+del test.
+
+Por esta razón, uno de los tests aparece como `skipped` de forma intencional.
+
+## Resultado de ejecución de Clase 08
+
+```text
+Running 7 tests
+
+7 passed
+```
+
+## Resultado de ejecución de los retos
+
+```text
+Running 4 tests using 1 worker
+
+3 passed
+1 skipped
+```
+
+## Resultado de ejecución conjunta
+
+```text
+10 passed
+1 skipped
+```
+
+El test omitido corresponde al Reto 3 y forma parte del comportamiento
+esperado de la prueba con `test.skip()` dinámico.
+
+## SQA Plan
+
+Como parte de la práctica se creó:
+
+```text
+documentos/sqa-plan-saucedemo.md
+```
+
+El documento incluye:
+
+- Propósito.
+- Alcance.
+- Herramientas.
+- Criterios de salida.
+
+## Comandos utilizados
+
+### Ejecutar la Clase 08
+
+```bash
+npx playwright test tests/clase08.spec.ts
+```
+
+### Ejecutar los retos
+
+```bash
+npx playwright test tests/tarea08.spec.ts
+```
+
+### Ejecutar ambos archivos
+
+```bash
+npx playwright test tests/clase08.spec.ts tests/tarea08.spec.ts
+```
+
+### Ejecutar secuencialmente
+
+```bash
+npx playwright test tests/clase08.spec.ts --workers=1
+```
+
+### Abrir reporte HTML
+
+```bash
+npx playwright show-report
+```
+
+## Conclusión
+
+La Clase 08 permitió organizar mejor las pruebas automatizadas mediante hooks,
+suites y funciones reutilizables.
+
+El uso de `beforeEach()` redujo la repetición del login, mientras que
+`afterEach()` permitió preparar evidencia automática ante fallos.
+
+También se trabajó con ejecución paralela, suites seriales, `test.slow()` y
+`test.skip()` dinámico, permitiendo controlar de mejor manera el comportamiento
+y tiempo de ejecución de los tests.
+
+Finalmente, se creó un SQA Plan mínimo para documentar el propósito, alcance,
+herramientas y criterios de salida del proceso de pruebas sobre Sauce Demo.
