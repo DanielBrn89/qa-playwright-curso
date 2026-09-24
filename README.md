@@ -612,3 +612,37 @@ y tiempo de ejecución de los tests.
 
 Finalmente, se creó un SQA Plan mínimo para documentar el propósito, alcance,
 herramientas y criterios de salida del proceso de pruebas sobre Sauce Demo.
+
+# Clase 09 - Fixtures y Tests Parametrizados en Playwright
+
+## Descripción
+
+En esta práctica se trabajó con fixtures personalizados y tests parametrizados
+en Playwright utilizando la aplicación Sauce Demo.
+
+Se implementaron fixtures para reutilizar páginas y estados previamente
+preparados, además de pruebas parametrizadas para ejecutar varios escenarios
+sin repetir el mismo código.
+
+## Pruebas realizadas
+
+Se implementaron nueve pruebas base:
+
+1. Verificar el inventario utilizando el fixture `inventoryPage`.
+2. Verificar el carrito utilizando el fixture `cartPage`.
+3. Realizar login manual utilizando el fixture `loginPage`.
+4. Login con usuario estándar.
+5. Login con usuario bloqueado.
+6. Login con campos vacíos.
+7. Agregar Sauce Labs Backpack al carrito.
+8. Agregar Sauce Labs Bike Light al carrito.
+9. Agregar Sauce Labs Bolt T-Shirt al carrito.
+
+## Resultado de ejecución
+
+Los nueve tests base se ejecutaron correctamente.
+
+```text
+Running 9 tests
+
+9 passed
