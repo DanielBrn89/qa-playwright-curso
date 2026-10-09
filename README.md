@@ -646,3 +646,25 @@ Los nueve tests base se ejecutaron correctamente.
 Running 9 tests
 
 9 passed
+
+## Clase 10 - Tags, soft assertions y cross-browser
+
+En esta práctica se trabajó con tags múltiples, `--grep-invert`,
+soft assertions mediante `expect.soft()` y validaciones según el
+navegador utilizando el fixture `browserName`.
+
+### Pruebas realizadas
+
+1. Test con múltiples tags `@regression` y `@ui`.
+2. Exclusión del test mediante `--grep-invert`.
+3. Verificación de atributos utilizando `expect.soft()`.
+4. Validación según navegador con `browserName`.
+
+### Resultado de ejecución
+
+Los tests se ejecutaron correctamente en Chromium, Firefox y WebKit.
+
+```text
+Reto 1: 3 passed
+Reto 2: 3 passed
+Reto 3: 3 passed
